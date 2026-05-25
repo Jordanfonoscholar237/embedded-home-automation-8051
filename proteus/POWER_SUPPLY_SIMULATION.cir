@@ -1,0 +1,23 @@
+* Simple power supply simulation model for documentation
+* This is a conceptual SPICE-style netlist for the power stage.
+* Use Proteus/Multisim/LTspice/ngspice and adjust models as needed.
+
+Vin npri 0 SIN(0 311 50)       ; 220Vrms mains represented as 311V peak
+* Ideal transformer approximation using dependent source ratio 220:12
+Esec nsec 0 npri 0 0.0545
+
+D1 nsec nrect D1N4007
+D2 0 nrect D1N4007
+D3 nsec 0 D1N4007
+D4 0 nsec D1N4007
+
+Cfilter nrect 0 1000u
+Rload nrect 0 1k
+
+* Ideal regulator placeholders
+E5 v5 0 nrect 0 0.4167
+E12 v12 0 nrect 0 1.0
+
+.model D1N4007 D(IS=1n RS=0.1 N=1.9 BV=1000 IBV=5u CJO=10p)
+.tran 0 100m 0 100u
+.end

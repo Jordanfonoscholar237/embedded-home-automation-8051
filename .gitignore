@@ -1,0 +1,19 @@
+# Build/generated files
+*.hex
+*.lst
+*.obj
+*.lnp
+*.m51
+*.uvgui.*
+*.bak
+
+# Proteus/Keil backups
+Backup Of *
+Last Loaded *
+*.workspace
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

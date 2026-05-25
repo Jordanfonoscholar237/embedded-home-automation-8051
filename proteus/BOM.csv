@@ -1,0 +1,17 @@
+Qty,Component,Suggested Proteus Part,Purpose
+1,AT89C51 / AT89S51,AT89C51 or 8051 family MCU,Main controller
+1,HC-05 Bluetooth module,COMPIM or Virtual Terminal substitute,Serial input source
+1,Virtual Terminal,VIRTUAL TERMINAL,Proteus Bluetooth command simulation
+1,ULN2003A / ULN2803A,ULN2003A or ULN2803A,Relay driver
+1,8-channel relay module,Relay components or generic relays,Output switching
+1,16x2 LCD,LM016L,Status display
+1,Crystal 11.0592 MHz,CRYSTAL,UART clock
+2,10pF capacitor,CAP,Crystal capacitors
+1,10uF capacitor,CAP-ELEC,Reset network
+1,8.2k resistor,RES,Reset network
+1,12-0-12 transformer,TRANSFORMER,Step-down power supply
+4,1N4001/1N4007 diodes,1N4001 or 1N4007,Bridge rectifier
+1,1000uF capacitor,CAP-ELEC,Input filter
+1,LM7805,7805,5V regulated output
+1,LM7812,7812,12V regulated output
+6,Lamps/LEDs/Motor loads,"LAMP, LED, MOTOR",Home appliance outputs

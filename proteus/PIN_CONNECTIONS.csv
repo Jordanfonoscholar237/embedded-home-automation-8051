@@ -1,0 +1,25 @@
+Section,Component,Pin/Node,Connects To,Notes
+Microcontroller,AT89C51/AT89S51,XTAL1/XTAL2,11.0592 MHz crystal + two 10pF capacitors to GND,UART-friendly clock
+Microcontroller,AT89C51/AT89S51,RST,10uF capacitor + 8.2k resistor reset network,As described in report
+Microcontroller,AT89C51/AT89S51,EA/VPP,VCC +5V,Use internal program memory
+Bluetooth/Input,HC-05 or Virtual Terminal,TXD,8051 RXD P3.0,Cross-connect serial
+Bluetooth/Input,HC-05 or Virtual Terminal,RXD,8051 TXD P3.1,Use level shifting in real hardware
+Bluetooth/Input,HC-05,VCC,5V or module-specific supply,Most breakout boards accept 5V VCC
+Bluetooth/Input,HC-05,GND,GND,Common ground
+LCD,LM016L/16x2 LCD,D0-D7,P1.0-P1.7,8-bit mode
+LCD,LM016L/16x2 LCD,RS,P2.6 or alternate free pin,If using LCD with full firmware
+LCD,LM016L/16x2 LCD,E,P2.7 or alternate free pin,If using LCD with full firmware
+LCD,LM016L/16x2 LCD,RW,GND,Write-only LCD mode
+Relay Driver,ULN2003A,IN1,P2.0,Light relay
+Relay Driver,ULN2003A,IN2,P2.1,Fan relay
+Relay Driver,ULN2003A,IN3,P2.2,Gate relay
+Relay Driver,ULN2003A,IN4,P2.3,Doorbell relay
+Relay Driver,ULN2003A,IN5,P2.4,Alarm relay
+Relay Driver,ULN2003A,IN6,P2.5,Security relay
+Relay Driver,ULN2003A,COM,Relay supply +12V,Flyback diode common
+Relay Driver,ULN2003A,GND,GND,Common ground
+Power,Transformer,Primary,220VAC source,Simulation only; use isolation in hardware
+Power,Transformer,Secondary,12VAC,Bridge rectifier input
+Power,Bridge Rectifier,DC output,Filter capacitor + regulators,IN4001/1N4007 diodes
+Power,LM7805,Output,+5V rail,"MCU, LCD, HC-05 logic"
+Power,LM7812,Output,+12V rail,Relay coils
