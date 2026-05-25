@@ -124,7 +124,7 @@ Command | Function
 
 This project is open source (choose a license like MIT). See the LICENSE file for details.
 
-## Author (Optional)
+## Author
 
 FONO PEVETMI JORDAN LOIC – project owner.  
 For questions, please open a GitHub issue.
